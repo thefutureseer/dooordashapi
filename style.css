@@ -1,0 +1,14 @@
+h1 {
+ color: aqua;
+}
+
+.input_forms {
+  display: flex;
+  flex-direction: column;
+  background: gray;
+}
+
+#form-1 {
+  display: flex;
+  flex-direction: column;
+}
