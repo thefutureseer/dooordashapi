@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shsh!</title>
+</head>
+<body>
+  <div class="order_details_container">
+   <div class="container">
+    <div class="input_forms">
+
+     <div class="address_details">
+       <h1 class="h1">Shsh</h1>
+       <p>Inner city outreach of/for Gods love</p>
+       <p>1227 Folsom street, San Francisco, Ca. 94103</p>
+       <p>(+1-415) 777-7771</p>
+       <p class="address_label">Enter your address below</p>
+     </div>
+     
+     <form action="form-handler.php" method="post" onsubmit="dothis" class="onsubmit" autocomplete>
+        <div class="address_wrapper">
+         <input type="text" class="street" name="street" placeholder="street" maxlength="10" required> 
+        </div>
+
+
+        <label for="input1">Input 1:</label>
+        <input type="text" id="input1" name="input1" maxlength="10" required/>
+      
+        <label for="input2">Input 2:</label>
+        <input type="text" id="input2" name="input2" maxlength="10" required/>
+      
+        <label for="input3">Input 3:</label>
+        <input type="checkbox" id="input3" name="input3" maxlength="10" required/>
+      
+        <label for="input4">Input 4:</label>
+        <input type="radio" id="input4" name="input4-5" value="option0"/>
+        <input type="radio" id="input4" name="input4" value="option1"/>
+        <input type="radio" id="input4" name="input4" value="option2"/>
+      
+        <label for="input5">Input 5:</label>
+        <select id="input5" name="input5">
+          <option value="option1">Option 1</option>
+          <option value="option2">Option 2</option>
+        </select>
+      
+        <input type="submit" value="Submit"/>
+      </form>
+     
+
+    </div>
+   </div> 
+  </div>
+  <script src="order.js"></script>
+  <script src="delivery.js"></script>
+</body>
+</html>
