@@ -1,0 +1,23 @@
+{
+  "name": "shsh",
+  "version": "1.0.0",
+  "description": "doordash for the soul",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thefutureseer/dooordashapi.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thefutureseer/dooordashapi/issues"
+  },
+  "homepage": "https://github.com/thefutureseer/dooordashapi#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "jsonwebtoken": "^9.0.0"
+  }
+}
