@@ -8,19 +8,19 @@
   <title>Shsh!</title>
 </head>
 <body>
-  <div class="order_details_container">
-   <div class="container">
-    <div class="input_forms">
+ <div class="order_details_container">
+  <div class="container">
+   <div class="input_forms">
 
-     <div class="address_details">
-       <h1 class="h1">Shsh</h1>
-       <p>Inner city outreach program of & for Gods love</p>
-       <p>1227 Folsom street, San Francisco, Ca. 94103</p>
-       <p>+1 (415) 777-7771</p>
-       <p class="address_label">Enter your address below</p>
-     </div>
+    <div class="address_details">
+      <h1 class="h1">Shsh Bhakti page</h1>
+      <p>Inner city outreach program of & for Gods love</p>
+      <p>1227 Folsom street, San Francisco, Ca. 94103</p>
+      <p>+1 (415) 777-7771</p>
+      <p class="address_label">Enter your address below</p>
+    </div>
      
-     <form action="form-handler.php" method="post" onsubmit="dothis" id="form-1" autocomplete>
+    <form action="form-handler.php" method="post" onsubmit="dothis" id="form-1" autocomplete>
       <input type="text" id="street" name="street" placeholder="street" maxlength="10" required> 
       <!-- <label for="input1">Input 1:</label> -->
       <input type="text" id="city" name="city" maxlength="10" placeholder="city" required/>
@@ -32,32 +32,75 @@
       
       <div class="holy_wrapper">
         <p>contact details:</p>
-        <input type="text" id="name" name="dropoff_contact_given_name" maxlength="10" placeholder="first name" required/>
-        <input type="text" id="lastname" name="dropoff_contact_family_name" maxlength="10" placeholder="last name" required/>
-        <input type="number" id="phonenumber" name="dropoff_phone_number" maxlength="10" placeholder="phone number" required/>
+        <div class="contact">
+         <input type="text" id="name" name="dropoff_contact_given_name" maxlength="10" placeholder="first name" required/>
+         <input type="text" id="lastname" name="dropoff_contact_family_name" maxlength="10" placeholder="last name" required/>
+         <input type="number" id="phonenumber" name="dropoff_phone_number" maxlength="10" placeholder="phone number" required/>
+        </div>
 
-
-        <label for="input3">Input 3:</label>
-        <input type="checkbox" id="input3" name="input3" maxlength="10" required/>
+        <!-- checkbox with fake values to check the api $money done in cents -->
+        <div class="input-3">
+          <label for="input3">Input 3:</label>  
+          <input type="checkbox" id="input3" name="input3" value="10000" maxlength="10" required/>
+          <input type="checkbox" id="input3" name="input3" value="11000" maxlength="10" required/>
+          <input type="checkbox" id="input3" name="input3" value="12000" maxlength="10" required/>
+        </div>
         
-        <label for="input4">Input 4:</label>
-         <input type="radio" id="input4" name="input4-5" value="option0"/>
-         <input type="radio" id="input4" name="input4" value="option1"/>
-         <input type="radio" id="input4" name="input4" value="option2"/>
-         
-         <label for="input5">Input 5:</label>
-         <select id="input5" name="input5">
-           <option value="option1">Option 1</option>
-           <option value="option2">Option 2</option>
+        <div class="input-4">
+          <label for="input4">Input 4:</label>
+          <input type="radio" id="input4" name="input4-5" value="option0"/>
+          <input type="radio" id="input4" name="input4" value="option1"/>
+          <input type="radio" id="input4" name="input4" value="option2"/>
+          <input type="radio" id="input4" name="input4" value="option3"/>
+        </div>
+        
+        <div class="input-5">
+          <label for="input5">Input 5:</label>
+          <select id="input5" name="input5">
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
           </select>
-          
-          <input type="submit" value="Submit"/>
         </div>
-        </div>
-     </form>
+        
+        <input type="submit" value="Submit"/>
       </div>
-   </div> 
-  </div>
+      
+      <div class="payment">
+        <div>
+          <h2>Payment summary</h2>
+          <table>
+            <tbody>
+              <tr>
+                <th>Subtotal:</th>
+                <td id="price"></td>
+              </tr>
+              <tr>
+                <th>Delivery fee:</th>
+                <td id="fee"></td>
+              </tr>
+              <tr>
+                <th>Order total:</th>
+                <td id="total"></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="donation">
+            <div class="donation-options">
+            </div>
+          </div>
+        </div>
+        
+        <div class="btns">
+          <button id="orderBtn" onclick="createDelivery()" >
+            Place Order
+          </button>
+        </div>
+      </div>
+    </form>
+
+   </div>
+  </div> 
+ </div>
   <script src="order.js"></script>
   <script src="delivery.js"></script>
 </body>
