@@ -1,0 +1,13 @@
+using full stack apps I've built previously all on my github:
+
+secret app: confessions,
+Thanksgiving exerciser app: ledger for anyone to keep track of things
+May App: social media for message board,
+Next shsh app for the front end to drag drop and hide other religions
+doordashapi: get started with an api to order and have drivers as needed
+movie look up: to find movies
+
+NEEDED: 
+connection to zoom,
+connection to the metaverse and all platforms,
+messaging app
