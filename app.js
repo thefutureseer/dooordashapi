@@ -1,5 +1,26 @@
-const jwt = require('jsonwebtoken');
-require("dotenv").config();
+import express from 'express';
+import path from 'path';
+import {fileURLToPath} from 'url'
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, "index.html"))
+});
+
+app.listen(PORT, (err) => {
+  if(err) {
+    return console.log("ERROR", err);
+  }
+  console.log(`Listening on port: ${PORT}`)
+} )
+
+
+import jwt from 'jsonwebtoken';
+import "dotenv/config";
 console.log(process.env);
 
 const accessKey = process.env;
@@ -22,7 +43,7 @@ const token = jwt.sign(
 
 console.log(token)
 
-const axios = require('axios')
+import axios from 'axios';
 
 const body = JSON.stringify({
   external_delivery_id: 'D-12345',
@@ -45,8 +66,8 @@ axios
     },
   })
   .then(function (response) {
-    console.log(response.data)
-    console.dir(response.data, {depth: null, colors: true})
+    // console.log(response.data)
+    Object.entries(response).forEach(keyValuePair => {console.log("  ",...keyValuePair)})
   })
   .catch(function (error) {
     console.log(error)
